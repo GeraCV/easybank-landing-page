@@ -3,6 +3,11 @@
   text-align:  center;
   padding: 2em;
 
+  @include media(large) {
+    text-align: initial;
+    padding: 2rem 2rem 2rem 5rem;
+  }
+
   .title {
     font-size: 2rem;
     font-weight: 300;
@@ -10,7 +15,11 @@
 
   .text {
       font-size: .9rem;
+
+    @include media(large){
+      width: 65%;
     }
+  }
 }
 
 .choose-cards {
@@ -19,14 +28,39 @@
   background: var(--Light-Grayish-Blue);
   margin-bottom: 5rem;
 
+
+   @include media(medium) {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.2rem;
+    padding: 0 3rem;
+  }
+
+  @include media(large) {
+    grid-template-rows: none;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.2rem;
+    padding: 0 3rem;
+  }
+
   
   .card {
     padding: 1em 2em;
     text-align: center;
 
+    @include media(large){
+      text-align: initial;
+      padding: 0 0 3em 0;
+    }
+
     &__container-img {
       display: flex;
       justify-content: center;
+
+      @include media(large) {
+        justify-content: start;
+        padding: 1em;
+      }
     }
 
     &__text {

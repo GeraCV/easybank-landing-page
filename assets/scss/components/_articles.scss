@@ -4,11 +4,16 @@
 }
 .cards-latest-article {
   background: var(--White);
-  .latest-title {
 
+  .latest-title {
     .title {
     font-size: 1.8rem;
     text-align: center;
+
+      @include media(large) {
+        text-align: initial;
+        padding: 0 2em;
+      }
     }
   }
 
@@ -18,53 +23,76 @@
     grid-row-gap: 1rem;
     background: var( --Light-Grayish-Blue);
     padding-bottom: 5rem;
-      
-  }
-  
-.card {
-  width: 100%;
-  text-align: left;
-  background: var( --Light-Grayish-Blue);
-  padding: 0 1rem;
 
-  &__container-img {
+    @include media(medium) {
+      grid-template-rows: none;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      padding: 0 3rem 5rem 3rem;
+    }
+
+    @include media(large) {
+      grid-template-rows: none;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      padding: 0 3rem 5rem 3rem;
+    }   
+  }
+    
+  .card {
     width: 100%;
-   
-    & .image-article {
+    text-align: left;
+    background: var( --Light-Grayish-Blue);
+    padding: 0 1rem;
+
+    @include media(large) {
+      padding: 0;
+    }
+
+    &__container-img {
       width: 100%;
-      border-top-left-radius: var(--border-radius);
-      border-top-right-radius: var(--border-radius);
+    
+      & .image-article {
+        width: 100%;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        @include media(large) {
+          height: 138px;
+        }
+      }
+    }
 
+    &__from {
+      .from {
+        font-size: .7em;
+        background: var(--White);
+        margin: 0;
+        padding: var(--padding);
+      }
     }
-  }
 
-  &__from {
-    .from {
-      font-size: .7em;
-      background: var(--White);
-      margin: 0;
-      padding: var(--padding);
+    &__title {
+      .title {
+        font-size: .95rem;
+        background: var(--White);
+        margin: 0;
+        padding: var(--padding);
+      }
     }
-  }
+    &__text {
+      .text {
+        font-size: .75rem;
+        background: var(--White);
+        margin: 0;
+        padding: var(--padding);
+        padding-bottom: 2rem;
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
 
-  &__title {
-    .title {
-      font-size: .95rem;
-      background: var(--White);
-      margin: 0;
-      padding: var(--padding);
+        @include media(large) {
+          font-size: .7rem;
+        }
+      }
     }
   }
-  &__text {
-    .text {
-      font-size: .75rem;
-      background: var(--White);
-      margin: 0;
-      padding: var(--padding);
-      padding-bottom: 2rem;
-      border-bottom-left-radius: var(--border-radius);
-      border-bottom-right-radius: var(--border-radius);
-    }
-  }
-}
 }

@@ -3,6 +3,11 @@
   color: var(--White);
   padding: 2.5rem 0;
 
+  @include media(large) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .brand {
     padding: .5rem 0;
 
@@ -20,30 +25,75 @@
     }
   }
 
-  .contact {
-    text-align: center;
-    font-weight: 300;
-    font-size: .9rem;
-  }
+.contact {
+  text-align: center;
+  font-weight: 300;
+  font-size: .9rem;
 
-  .invited-footer{
-    a {
-      color: var(--White);
-    font-weight: 400;
-    padding: .7rem 1rem;
-    border-radius: 5rem;
-    display: block;
-    margin:  2.5rem auto;
-    text-align: center;
-    width: 10rem;
-    font-size: .9rem;
+  .text {
+    margin: .5rem;
+
+    @include media(large) {
+      text-align: initial;
     }
   }
+}
+
+.invited-footer{
+  display: block;
+
+  @include media(large) {
+    margin-left: 3rem;
+  }
+
+  a {
+  color: var(--White);
+  font-weight: 400;
+  padding: .7rem 1rem;
+  border-radius: 5rem;
+  display: block;
+  margin:  2.5rem auto;
+  text-align: center;
+  width: 10rem;
+  font-size: .9rem;
+
+  
+    @include media(large) {
+      margin: .5rem auto;
+    }
+  }
+}
 
   .rights {
     .text {
       text-align: center;
       font-size: .9rem;
+      margin: 0;
+      padding: 1rem;
     }
+  }
+}
+
+
+@include media(large) {
+  .primary-section-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-section-footer {
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-template-columns: max-content max-content;
+    margin: auto;
+  }
+
+  .third-section-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
 }

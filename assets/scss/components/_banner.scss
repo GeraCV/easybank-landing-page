@@ -2,6 +2,14 @@
   background: var(--White);
   margin-bottom: 6rem;
   position: relative;
+  
+
+  @include media(large) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+    width: 100%;
+  }
 }
 
 .container-banner-img {
@@ -9,9 +17,23 @@
   height: 372px;
   overflow: hidden;
 
+  & .bg-desktop {
+    display: none;
+
+    @include media(large){
+      display: block;
+      position: relative;
+      top: -13rem;
+    }
+  }
+
   & .bg-mobile {
     width: 100%;
     top: calc( 0 + #{$height-header-responsive});
+
+    @include media(large){
+      display: none;
+    }
   }
   & .mockup {
   position: absolute;
@@ -20,23 +42,46 @@
   height: 500px;
   width: 100%;
   left: 0;
-  
+
+  @include media(large){
+
+    top: -5rem;
+    width: 45%;
+    left: inherit;
+    right: 0;
+    } 
   }
 }
 
 .container-information-banner {
+
+  @include media(large){
+    padding: 1rem 0 1rem 5rem;
+  }
   .title {
   margin: 0;
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
   padding: 1em 1em .5em 1em;
+
+    @include media(large){
+      font-size: 2.7rem;
+      padding: 0;
+      text-align: initial;
+    }
   }
 
   .text {
     margin: 1rem 1.5rem;
     text-align: center;
     font-size: .8em;
+
+    @include media(large){
+    text-align: initial;
+    margin: 1rem 0;
+    width: 85%;
+    }
   }
 }
 
@@ -49,4 +94,8 @@
   margin:  2.5rem auto;
   text-align: center;
   width: 10rem;
+
+  @include media(large) {
+    margin: 2rem 0;
+  }
 }
