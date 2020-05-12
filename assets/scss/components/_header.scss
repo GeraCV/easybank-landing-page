@@ -10,6 +10,7 @@
   background: var(--White);
   z-index: var(--z-fixed);
 
+  
   @include media(medium) {
     grid-template-columns: repeat(3, 1fr);
   }
