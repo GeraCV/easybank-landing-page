@@ -1,0 +1,19 @@
+body {
+    margin-top: $height-header-responsive;
+
+    @include media(xlarge) {
+        margin-top: $height; 
+    }
+}
+
+.color-gradient {
+  background-image: linear-gradient(to right, var(--Lime-Green) 0, var(--Bright-Cyan) 100%);
+}
+
+.dark-blue {
+  color: var(--Dark-Blue);
+}
+
+.graysy-blue {
+  color: var(--Grayish-Blue);
+}

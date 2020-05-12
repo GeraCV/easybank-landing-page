@@ -1,0 +1,12 @@
+.main-header {
+  display:grid;
+  grid-template-columns: 1fr max-content;
+  height: $height-header-responsive;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background: var(--White);
+  z-index: var(--z-fixed);
+}

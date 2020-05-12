@@ -1,0 +1,49 @@
+.main-footer {
+  background: var(--Dark-Blue) ;
+  color: var(--White);
+  padding: 2.5rem 0;
+
+  .brand {
+    padding: .5rem 0;
+
+    & img {
+      margin: auto;
+    }
+  }
+
+  .sociales {
+    display: flex;
+    justify-content: center;
+
+    img {
+      padding: 1rem .5rem;
+    }
+  }
+
+  .contact {
+    text-align: center;
+    font-weight: 300;
+    font-size: .9rem;
+  }
+
+  .invited-footer{
+    a {
+      color: var(--White);
+    font-weight: 400;
+    padding: .7rem 1rem;
+    border-radius: 5rem;
+    display: block;
+    margin:  2.5rem auto;
+    text-align: center;
+    width: 10rem;
+    font-size: .9rem;
+    }
+  }
+
+  .rights {
+    .text {
+      text-align: center;
+      font-size: .9rem;
+    }
+  }
+}
